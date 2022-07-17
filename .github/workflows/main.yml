@@ -14,3 +14,6 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: whoami
+                cd /home/deploy/phpapp/PHP-Practice
+                git pull origin main
+                docker-compose up --build -d
