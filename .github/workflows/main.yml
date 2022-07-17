@@ -1,9 +1,14 @@
-name: remote ssh command
-on: [push]
+name: PHP APP
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
 
   build:
-    name: Build
+    name: CI/CD-PHPAPP
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using password
@@ -13,7 +18,8 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: whoami
-                cd /home/deploy/phpapp/PHP-Practice
-                git pull origin main
-                docker-compose up --build -d
+        script: |
+          whoami
+          cd /home/deploy/phpapp/PHP-Practice
+          git pull origin main
+          docker-compose up --build -d
