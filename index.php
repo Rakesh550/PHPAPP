@@ -71,7 +71,7 @@
 <body>
         <div class="wrapper">
                 <h1>
-                        Unique Visitor Count
+                        Unique test
                 </h1>
                 <h3><?php echo $total_visitors; ?></h3>
         </div>
