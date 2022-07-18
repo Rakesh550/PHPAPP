@@ -24,3 +24,4 @@ jobs:
           sudo git pull origin main
           sudo docker-compose up --build -d
           sudo docker ps
+          sudo docker logs php-practice_web_1
