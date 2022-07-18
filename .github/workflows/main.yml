@@ -21,6 +21,7 @@ jobs:
         script: |
           whoami
           cd /home/deploy/phpapp/PHP-Practice
+          sudo git reset --hard
           sudo git pull origin main
           sudo docker-compose up --build -d
           sudo docker ps
