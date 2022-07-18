@@ -20,9 +20,10 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           whoami
-          cd /home/deploy/phpapp/PHP-Practice
-          sudo git reset --hard
-          sudo git pull origin main
-          sudo docker-compose up --build -d
-          sudo docker ps
-          sudo docker logs php-practice_web_1
+          cd /home/deploy/phpapp
+          sudo git clone git@github.com:Tejanarni/PHP-Practice.git
+          #sudo git reset --hard
+          #sudo git pull origin main
+          #sudo docker-compose up --build -d
+          #sudo docker ps
+          #sudo docker logs php-practice_web_1
