@@ -7,7 +7,7 @@ Assignment to set up CI/CD for Unique Visitors Tracking App
  
 Install                          | Virtual Machine with Docker engine   
 ---------------------------------|------------
-Terraform                       | for Infra Provisioning
+Terraform                        | for Infra Provisioning
  Azure Account                   | Service Priniciples - Subcription ID, Client ID, Client Secret , Tenant ID
 Visual Studio (recommended)      | VS 2019+
  
@@ -26,10 +26,9 @@ Visual Studio (recommended)      | VS 2019+
         ${{ secrets.HOST }}
         ${{ secrets.USERNAME }}
         ${{ secrets.PASSWORD }}
-    
-    ```
-  3. Import the counter.sql dump file by loging to admirer(mysql remote client) at port 8080. ( refere the mysql credentials used in index.php)
-  4. There you go!!   -   access the webpage at port 8000 - Test with multiple IPs
+        
+   3. Import the counter.sql dump file by loging to admirer(mysql remote client) at port 8080. ( refere the mysql credentials used in index.php)
+   4. There you go!!   -   access the webpage at port 8000 - Test with multiple IPs
  
 ## CI/CD with Github-Actions
 CI/CD process has been set up to this this Application & can refer the .github/workflows/main.yml
