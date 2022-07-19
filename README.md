@@ -8,7 +8,7 @@ steps.
 
 
 
-## UNiques visitores
+## Unique visitors
 
 ### What is Sentry?
 
@@ -80,4 +80,57 @@ Azure - Virtual Machine with docker engine
 1. Do one more `cf push` to make sure all the apps are up and running
 
 And you should have a working Sentry installation!
+
+
+<!-- New -->
+# My Awesome App
+ 
+## Introduction
+What the app is for.
+ 
+## Environment
+> Changing the environment? Change the CI/CD pipeline!
+ 
+Install                          | Version    
+---------------------------------|------------
+.NET Framework                   | 4.8
+PowerShell Core                  | 7.x
+Visual Studio (recommended)      | VS 2019+
+ 
+Sources:
+*   [.NET Framework](https://dotnet.microsoft.com/download/dotnet-framework)
+*   [PowerShell Core](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows)
+ 
+## Getting Started
+> Be sure to use the correct versions from above.
+ 
+**Environment**  
+1.  Install PowerShell Core [version].
+1.  Install .NET Framework [version].
+ 
+**Application** 
+    ```powershell
+    # Clone source
+    cd "C:\users\[user]\source\repos"
+    git clone [path-to-repo]
+    cd [appname]
+    # Build app
+    ./build.ps1
+    ```
+ 
+## Daily Development
+Things needed to smoothly develop, such as how to run service dependencies.
+ 
+## When to run the build script
+    ```powershell
+    ./build.ps1
+    ```
+The build script simulates what the CI server will do, and is intended to catch build errors before they get to the server. The script should be run before the "final" PR commit. That is:
+ 
+1.  Before pushing the final feature branch, AND/OR
+1.  Before pushing to the mainline branch
+ 
+## Troubleshooting
+Things that might go wrong. These SHOULD end up on product backlogs and get fixed.
+
 
